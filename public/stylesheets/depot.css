@@ -2,23 +2,23 @@
 
 /* Styles for main page */
 #banner {
-    background: #9c9 ;
+    background: white; /* #D9265B;*/
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 2px solid;
     font: small-caps 40px/40px "Times New Roman", serif;
-    color: #282 ;
+    color: #845172 ;
     text-align: center;
 }
 
 #banner img {
     float: left;
     width:       208px;
-    height:       40px;
+    height:       50px;
 }
 
 #columns {
-    background: #141 ;
+    background:white; /* #D9265B;*/
 }
 
 #main {
@@ -34,7 +34,7 @@
     padding-left: 1em;
     padding-bottom: 1em;
     width: 12em;
-    background: #141 ;
+    background: black ; /*#845172 ;*/
 }
 
 #side a {
@@ -194,6 +194,7 @@ h1 {
   font: bold smaller sans-serif;
 }
 
+/* Styles for the ajaxified cart*/
 .cart-title{
     font: 120%  bold;
     }
@@ -219,3 +220,34 @@ h1 {
     margin-bottom: 10px;
     }
 
+/*Styles for order form*/
+
+.depot-form fieldset {
+    background: #efe;
+    }
+
+.depot-form legend {
+    color: #dfd;
+    background: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em;
+    }
+
+.depot-form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+
+.depot-form select, .depot-form textarea, .depot-form input {
+  margin-left: 0.5em;
+}
+.depot-form .submit {
+  margin-left: 4em;
+}
+.depot-form div {
+  margin: 0.5em 0;
+}
