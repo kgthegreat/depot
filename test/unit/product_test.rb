@@ -3,6 +3,7 @@ require 'test_helper'
 class ProductTest < ActiveSupport::TestCase
 
   fixtures :products
+
   test "invalid with empty attributes" do
     product = Product.new
     assert !product.valid?
@@ -30,4 +31,21 @@ class ProductTest < ActiveSupport::TestCase
     assert !product.valid?
     assert_equal "Should be atleast 0.01", product.errors.on(:price)
   end
+
+  test "unique title" do
+    product = Product.new(:title => products(:fools_die).title ,
+                          :description => "xyz",
+                          :price => 1,
+                          :image_url => "abc.gif")
+
+    assert !product.save
+    assert_equal I18n.translate("activerecord.errors.messages.taken"), product.errors.on(:title)
+  end
+
+  test "Can create valid product from fixture" do
+    product = products(:fools_die)
+    assert product.save
+  end
+
+
 end

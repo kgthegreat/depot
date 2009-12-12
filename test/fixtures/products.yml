@@ -4,8 +4,10 @@ fools_die:
   title: Fools Die
   description: Good Book
   image_url: fd.jpg
+  price: 1
 
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
+white_tiger:
+  title: The White Tiger
+  description: rurality
+  image_url: white.png
+  price: 12
